@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Policy Validation</title>
+    </head>
+    <body>
+        <h2>Policy Validation</h2>
+        <p>Please enter the required details for insurance policy validation.</p>
+        <form action="{% url 'validate_policy' %}" method="POST">
+            <label for="min_sum_assured">Minimum Sum Assured (in Rs.)</label>
+            <input type="number" name="min_sum_assured" id="min_sum_assured" required>
+            <label for="max_sum_assured">Maximum Sum Assured (in Rs.)</label>
+            <input type="number" name="max_sum_assured" id="max_sum_assured" required>
+            <label for="min_age_limit">Minimum Age Limit (in years)</label>
+            <input type="number" name="min_age_limit" id="min_age_limit" required>
+            <label for="max_age_limit">Maximum Age Limit (in years)</label>
+            <input type="number" name="max_age_limit" id="max_age_limit" required>
+            <label for="annual_income">Annual Income (in Rs.)</label>
+            <input type="number" name="annual_income" id="annual_income" required>
+            <label for="sum_assured_range">Sum Assured Range</label>
+            <select name="sum_assured_range">
+                <option value="50K">50K</option>
+                <option value="1lac">1 lac</option>
+                <option value="1.5 lac">1.5 lac</option>
+                <option value="2 lac">2 lac</option>
+            </select>
+            <label for="policy_tenure_range">Policy Tenure Range (in years)</label>
+            <select name="policy_tenure_range">
+                <option value="12">12</option>
+                <option value="15">15</option>
+                <option value="18">18</option>
+                <option value="24">24</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
